@@ -63,6 +63,10 @@
             
         }
 
+        .gympass-content{
+            background-color: black;
+        }
+
         .header{
             background-image: url(../prot-academia/images/salao2-opac-2.jpg);
             background-position: center;
@@ -84,6 +88,13 @@
           font-size: 48px !important;
           
           
+        }
+
+        .p-gympass{
+            color: white;
+            text-align: left;
+            font-family: 'Alfa Slab One', sans-serif;
+            font-size: large;
         }
 
         .p-valores-content{
@@ -124,6 +135,16 @@
             fill: gray;
         }
 
+        .title-gympass{
+            font-family: 'Black Ops One', sans-serif;
+            font-size: xx-large;
+            color: white;
+        }
+
+        .img-gympass{
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+
         @keyframes blink{
             25%{
                 opacity: 0.5;
@@ -160,7 +181,7 @@
         <div class="d-flex flex-row-reverse">
             <div class="btn-headersocial">
                 <a href="https://gympass.com" class="btn btn-default btn-circle fill-image">
-                    <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\logo-nova.svg" class="image-gympass" viewBox="0 0 512 512">
+                    <img src="C:\\\\Users\\\\sauloalves_frwk\\\\Documents\\\\Projetos\\\\academia\\\\prototipoBootstrap\\\\prot-academia\\\\images\\\\logo-nova.svg" class="image-gympass" viewBox="0 0 512 512">
                 </a>
             </div>
             <div class="btn-headersocial">
@@ -176,7 +197,7 @@
         </div>
         <div class="p-0 d-flex justify-content-center">
             <div class="col center-block" style="text-align: center;">
-                <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\corrigida.png">
+                <img src="C:\\\\Users\\\\sauloalves_frwk\\\\Documents\\\\Projetos\\\\academia\\\\prototipoBootstrap\\\\prot-academia\\\\images\\\\corrigida.png">
                 <p class="my-1 p-header">Venha conhecer nossa academia!</p>
                 <span class="material-symbols-outlined  blink-class ">expand_more</span>
             </div>
@@ -185,6 +206,7 @@
 
     <!-- Content -->
     <div class="d-flex jusitfy-content-center">
+        <!-- Planos e valores -->
         <div class="col center-block mt-4" style="text-align: center;">
             <p class="p-valores-content mb-4">Conheça nossos planos que cabem no seu <span style="color: grey;">bolso!</span></p>
             <div id="carouselPlans" class="carousel slide carousel-fade" data-ride="carousel">
@@ -225,6 +247,19 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
+        </div>
+        <!-- Gympass -->
+        <div class="container">
+            <div class="row gympass-content mt-4">
+                <div class="col-sm p-4 text-center">
+                    <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\gympass-image.png" class="rounded mx-auto d-block img-fluid">
+                </div>
+                <div class="col-sm p-3 text-center my-auto">
+                    <span class="mb-2 title-gympass ">Estamos no Gympass!</span>
+                    <p class="p-gympass align-middle">O Gympass é um benefício corporativo, disponível para colaboradores de empresas parceiras. Com uma simples assinatura mensal, é possível acessar diferentes academias e estúdios, sem contrato ou custo adicional. </p>
+                    <p class="p-gympass align-text-bottom">Verifique com sua empresa se possui tal benefício e comece já a malhar com a gente!</p>
+                </div>
+            </div>
         </div>
     </div>
 
