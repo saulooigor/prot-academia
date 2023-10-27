@@ -50,6 +50,10 @@
             margin: auto;
         }
 
+        .container{
+            max-width: max-content !important;
+        }
+
         .fill-image {
             display: flex;
             justify-content: center;
@@ -76,6 +80,12 @@
             color: white;
             padding-top: 10px;
             padding: 1%;
+        }
+
+        .img-gympass{
+            width: 75%;
+            height: auto;
+            border-radius: 75%;
         }
 
         .material-symbols-outlined {
@@ -139,10 +149,6 @@
             font-family: 'Black Ops One', sans-serif;
             font-size: xx-large;
             color: white;
-        }
-
-        .img-gympass{
-            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
 
         @keyframes blink{
@@ -252,11 +258,11 @@
         <div class="container">
             <div class="row gympass-content mt-4">
                 <div class="col-sm p-4 text-center">
-                    <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\gympass-image.png" class="rounded mx-auto d-block img-fluid">
+                    <img class="img-gympass" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\gympass-image.png" class="rounded mx-auto d-block">
                 </div>
                 <div class="col-sm p-3 text-center my-auto">
-                    <span class="mb-2 title-gympass ">Estamos no Gympass!</span>
-                    <p class="p-gympass align-middle">O Gympass é um benefício corporativo, disponível para colaboradores de empresas parceiras. Com uma simples assinatura mensal, é possível acessar diferentes academias e estúdios, sem contrato ou custo adicional. </p>
+                    <span class="title-gympass">Estamos no Gympass!</span>
+                    <p class="mt-5 p-gympass align-middle">O Gympass é um benefício corporativo, disponível para colaboradores de empresas parceiras. Com uma simples assinatura mensal, é possível acessar diferentes academias e estúdios, sem contrato ou custo adicional. </p>
                     <p class="p-gympass align-text-bottom">Verifique com sua empresa se possui tal benefício e comece já a malhar com a gente!</p>
                 </div>
             </div>
