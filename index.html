@@ -86,6 +86,7 @@
             width: 75%;
             height: auto;
             border-radius: 75%;
+            box-shadow: 15px 15px white;
         }
 
         .material-symbols-outlined {
@@ -102,7 +103,8 @@
 
         .p-gympass{
             color: white;
-            text-align: left;
+            text-align: justify;
+            text-justify: inter-word;
             font-family: 'Alfa Slab One', sans-serif;
             font-size: large;
         }
@@ -146,9 +148,21 @@
         }
 
         .title-gympass{
-            font-family: 'Black Ops One', sans-serif;
+            font-family: 'Alfa Slab One', sans-serif;
             font-size: xx-large;
             color: white;
+        }
+
+        .title-group-class{
+            font-family: 'Black Ops One', sans-serif;
+            font-size: xx-large;
+            color: black;
+        }
+
+        .card{
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+            height: auto;
+            font-family: 'Alfa Slab One', sans-serif;
         }
 
         @keyframes blink{
@@ -184,10 +198,10 @@
   <body>
     <!-- Header -->
     <div class="header">
-        <div class="d-flex flex-row-reverse">
+        <div class="d-flex flex-row-reverse px-3">
             <div class="btn-headersocial">
                 <a href="https://gympass.com" class="btn btn-default btn-circle fill-image">
-                    <img src="C:\\\\Users\\\\sauloalves_frwk\\\\Documents\\\\Projetos\\\\academia\\\\prototipoBootstrap\\\\prot-academia\\\\images\\\\logo-nova.svg" class="image-gympass" viewBox="0 0 512 512">
+                    <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\logo-nova.svg" class="image-gympass" viewBox="0 0 512 512">
                 </a>
             </div>
             <div class="btn-headersocial">
@@ -203,7 +217,7 @@
         </div>
         <div class="p-0 d-flex justify-content-center">
             <div class="col center-block" style="text-align: center;">
-                <img src="C:\\\\Users\\\\sauloalves_frwk\\\\Documents\\\\Projetos\\\\academia\\\\prototipoBootstrap\\\\prot-academia\\\\images\\\\corrigida.png">
+                <img src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\corrigida.png">
                 <p class="my-1 p-header">Venha conhecer nossa academia!</p>
                 <span class="material-symbols-outlined  blink-class ">expand_more</span>
             </div>
@@ -211,7 +225,7 @@
     </div>
 
     <!-- Content -->
-    <div class="d-flex jusitfy-content-center">
+    <div class="d-flex jusitfy-content-center px-2">
         <!-- Planos e valores -->
         <div class="col center-block mt-4" style="text-align: center;">
             <p class="p-valores-content mb-4">Conheça nossos planos que cabem no seu <span style="color: grey;">bolso!</span></p>
@@ -261,9 +275,61 @@
                     <img class="img-gympass" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\gympass-image.png" class="rounded mx-auto d-block">
                 </div>
                 <div class="col-sm p-3 text-center my-auto">
-                    <span class="title-gympass">Estamos no Gympass!</span>
+                    <span class="title-gympass">Estamos no Gympass</span>
                     <p class="mt-5 p-gympass align-middle">O Gympass é um benefício corporativo, disponível para colaboradores de empresas parceiras. Com uma simples assinatura mensal, é possível acessar diferentes academias e estúdios, sem contrato ou custo adicional. </p>
                     <p class="p-gympass align-text-bottom">Verifique com sua empresa se possui tal benefício e comece já a malhar com a gente!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Aulas Coletiva -->
+        <div class="d-flex jusitfy-content-center mt-4">
+            <span class="mx-auto title-group-class" style="text-align: center;">Aulas Coletivas</span>
+        </div>
+        <div class="container">
+            <div class="row mt-2 px-2">
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                      <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                      <div class="card-img-overlay"></div>
+                      <div class="card-footer bg-dark text-white">Pilates</div>
+                    </div>
+                </div>
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                        <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-footer bg-dark text-white">Jiu-Jitsu</div>
+                      </div>
+                </div>
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                        <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-footer bg-dark text-white">Crossfit</div>
+                      </div>
+                </div>
+            </div>
+            <div class="row mb-4 px-2">
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                      <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                      <div class="card-img-overlay"></div>
+                      <div class="card-footer bg-dark text-white">Fit Dance</div>
+                    </div>
+                </div>
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                        <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-footer bg-dark text-white">Jump</div>
+                      </div>
+                </div>
+                <div class="col-sm my-2">
+                    <div class="card bg-dark text-white" style="border: 0px;">
+                        <img class="card-img" src="C:\\Users\\sauloalves_frwk\\Documents\\Projetos\\academia\\prototipoBootstrap\\prot-academia\\images\\aulacoletiva.jpg" alt="">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-footer bg-dark text-white">Judô</div>
+                      </div>
                 </div>
             </div>
         </div>
