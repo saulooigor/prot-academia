@@ -34,7 +34,7 @@
         .carousel.carousel-fade .carousel-item {
             display: block;
             opacity: 0;
-            transition: opacity ease-out .7s;
+            transition: opacity linear 1s;
         }
         
         .carousel.carousel-fade .carousel-item.active {
@@ -53,6 +53,8 @@
         .container{
             max-width: max-content !important;
         }
+
+        .fade-in-block { animation: fadeIn 5s; }
 
         .fill-image {
             display: flex;
@@ -177,6 +179,11 @@
             }
         }
 
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
     </style>
 
 
@@ -215,7 +222,7 @@
                 </a>
             </div>
         </div>
-        <div class="p-0 d-flex justify-content-center">
+        <div class="p-0 d-flex justify-content-center fade-in-block">
             <div class="col center-block" style="text-align: center;">
                 <img src="images/corrigida.png">
                 <p class="my-1 p-header">Venha conhecer nossa academia!</p>
