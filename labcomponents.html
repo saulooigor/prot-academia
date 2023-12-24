@@ -49,6 +49,15 @@
           animation-timing-function: linear;
         }
 
+        .divider{
+          border-top: 2px solid black;
+          border-radius: 2px;
+          opacity: .1 !important;
+          width: 100%;
+          position: relative;
+          
+        }
+
         html,
         body {
           margin: 0;
@@ -137,8 +146,18 @@
           font-family: 'Anton', sans-serif; 
           font-size: 54px;
         }
-
         
+        .carousel-item img{
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+
+        .carousel-caption span{
+          font-family: 'Anton', sans-serif; 
+          font-size: 36px;
+          color: black;
+        }
 
    </style>
 
@@ -203,7 +222,7 @@
               </div>
             </div>
         </div>
-        <div class="teste p-5">
+        <div class="teste pt-5">
           <!-- Colunas com imagens -->
           <div class="text-start text-black title-conveniado">
             ACEITAMOS O SEU CONVÊNIO
@@ -222,6 +241,38 @@
               <img src="images/totalpass.png" width="60%" height="60%">
             </div>
           </div>
+        </div>
+        <hr class="divider mb-5">
+        <!-- Carrossel de imagens - Biblioteca -->
+        <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" style="position: relative; z-index: 0;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner" style="height: 800px;">
+            <div class="carousel-item active">
+              <img src="images/barra.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/studio.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/salao2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/mulherpulando.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
         <!-- Divisor horizontal arredondado -->
         <!-- <hr class="rounded"> -->
