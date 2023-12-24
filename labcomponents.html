@@ -2,11 +2,28 @@
 <html lang="pt-BR">
   <head>
    <style>
+        
+
+        @keyframes progress-bar {
+          0% {border-color: #FC695A; left: 0%;}
+          25% {border-color: #FC695A; left: 40%;}
+          50% {border-color: #26D07C; left: 80%;}
+          75% {border-color: #26D07C; left: 40%;}
+          100% {border-color: #FC695A; left: 0%;}
+        }
 
         .rounded {
-          border-top: 5px solid #000000;
-          border-radius: 5px;
+          border-top: 10px;
+          border-color: #FC695A;
+          border-style: solid;
+          position: relative;
           opacity: 1 !important;
+          border-radius: 10px;
+          width: 20%;
+          animation-name: progress-bar;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
         }
 
         html,
@@ -95,6 +112,7 @@
         .title-conveniado{
           text-shadow: 2px 2px lightgray;
         }
+
    </style>
 
     <meta charset="utf-8">
@@ -158,8 +176,6 @@
               </div>
             </div>
         </div>
-        <!-- Divisor horizontal arredondado -->
-        <hr class="rounded">
         <!-- Colunas com imagens -->
         <div class="my-lg-3 text-center text-black title-conveniado" style="font-family: 'Bebas Neue', sans-serif; font-size: 54px;">
           SOMOS CONVENIADOS
@@ -174,6 +190,9 @@
             <img src="images/totalpass.png" width="60%" height="60%">
           </div>
         </div>
+        <!-- Divisor horizontal arredondado -->
+        <hr class="rounded">
+        <br /><br /><br /><br />
     </div>
   </body>
 
