@@ -12,6 +12,14 @@
           100% {border-color: #FC695A; left: 0%;}
         }
 
+        @keyframes progress-bar-inverse {
+          0% {border-color: #26D07C; left: 80%;}
+          25% {border-color: #26D07C; left: 40%;}
+          50% {border-color: #FC695A; left: 0%;}
+          75% {border-color: #FC695A; left: 40%;}
+          100% {border-color: #26D07C; left: 80%;}
+        }
+
         .rounded {
           border-top: 10px;
           border-color: #FC695A;
@@ -21,6 +29,21 @@
           border-radius: 10px;
           width: 20%;
           animation-name: progress-bar;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        .rounded-inverse {
+          border-top: 10px;
+          border-color: #26D07C;
+          border-style: solid;
+          position: relative;
+          left: 80%;
+          opacity: 1 !important;
+          border-radius: 10px;
+          width: 20%;
+          animation-name: progress-bar-inverse;
           animation-duration: 5s;
           animation-iteration-count: infinite;
           animation-timing-function: linear;
@@ -113,6 +136,8 @@
           text-shadow: 2px 2px lightgray;
         }
 
+        
+
    </style>
 
     <meta charset="utf-8">
@@ -176,10 +201,12 @@
               </div>
             </div>
         </div>
+        
         <!-- Colunas com imagens -->
         <div class="my-lg-3 text-center text-black title-conveniado" style="font-family: 'Bebas Neue', sans-serif; font-size: 54px;">
           SOMOS CONVENIADOS
         </div>
+        <hr class="rounded-inverse">
         <div class="row">
           <div class="col-md-6 d-flex justify-content-center align-items-center p-3 flex-column bg-gympass">
             <img class="mb-0" src="images/banner_gympass.webp" width="80%" height="80%">
