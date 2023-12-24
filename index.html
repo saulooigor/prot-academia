@@ -184,6 +184,108 @@
             100% { opacity: 1; }
         }
 
+        @keyframes progress-bar {
+            0% {border-color: #FC695A; left: 0%;}
+            25% {border-color: #FC695A; left: 40%;}
+            50% {border-color: #26D07C; left: 80%;}
+            75% {border-color: #26D07C; left: 40%;}
+            100% {border-color: #FC695A; left: 0%;}
+          }
+  
+          .rounded {
+            border-top: 10px;
+            border-color: #FC695A;
+            border-style: solid;
+            position: relative;
+            opacity: 1 !important;
+            border-radius: 10px;
+            width: 20%;
+            animation-name: progress-bar;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+
+          .container-aulas{
+            text-align: center;
+            margin-top: 2%;
+            
+        }
+
+        .card-image-group div{
+            width: 200px;
+            max-width: 100%;
+        }
+
+        .row .col-md-3{
+            height: 600px;
+            min-height: 20%;
+            max-height: 80%;
+            position: relative;
+            transition: height 1s;
+            
+        }
+
+        .row .col-md-3:hover{
+          left: -2%;
+          bottom: -20%;
+          box-shadow: rgb(38, 57, 77) 0px 30px 30px 0px;
+          height: 610px;
+        }
+
+        .card-coletiva {
+            background-image: url(images/aulacoletiva.jpg);
+            background-position-x: 75%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 0 !important;
+        }
+
+        .card-judo{
+          background-image: url(images/judo.jpg);
+          background-position-x: 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 57%;
+          color: white;
+          padding: 0 !important;
+        }
+
+        .card-fitdance{
+          background-image: url(images/dancefit.jpg);
+          background-position-x: 75%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 57%;
+          color: white;
+          padding: 0 !important;
+        }
+
+        .card-crossfit{
+          background-image: url(images/crossfit.jpg);
+          background-position-x: 75%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 57%;
+          color: white;
+          padding: 0 !important;
+        }
+
+        .card-footer{
+          
+          height: 50px; 
+          border-left: 100px solid transparent;
+          font-family: 'Anton', sans-serif;
+          font-size: x-large;
+          font-style: oblique;
+          
+        }
+
+        .title-conveniado{
+          text-shadow: 2px 2px lightgray;
+        }
+
     </style>
 
 
@@ -194,7 +296,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Black+Ops+One&display=swap" rel="stylesheet">
     
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -276,70 +378,45 @@
                 </button>
         </div>
         <!-- Gympass -->
-        <div class="container">
-            <div class="row gympass-content mt-4">
-                <div class="col-sm p-4 text-center">
-                    <img class="img-gympass" src="images/gympass-image.png" class="rounded mx-auto d-block">
-                </div>
-                <div class="col-sm p-3 text-center my-auto">
-                    <span class="title-gympass">Estamos no Gympass</span>
-                    <p class="mt-5 p-gympass align-middle">O Gympass é um benefício corporativo, disponível para colaboradores de empresas parceiras. Com uma simples assinatura mensal, é possível acessar diferentes academias e estúdios, sem contrato ou custo adicional. </p>
-                    <p class="p-gympass align-text-bottom">Verifique com sua empresa se possui tal benefício e comece já a malhar com a gente!</p>
-                </div>
+        <div class="row my-lg-5 px-2">
+            <div class="col-md-3 card-coletiva d-flex flex-column-reverse" >
+              <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
+                FUNCIONAL
+              </div>
+            </div>
+            <div class="col-md-3 card-judo d-flex flex-column-reverse">
+              <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
+                JUDÔ
+              </div>
+            </div>
+            <div class="col-md-3 card-fitdance d-flex flex-column-reverse" >
+              <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
+                FITDANCE
+              </div>
+            </div>
+            <div class="col-md-3 card-crossfit d-flex flex-column-reverse" >
+              <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
+                CROSSFIT
+              </div>
             </div>
         </div>
-        <!-- Aulas Coletiva -->
-        <div class="d-flex jusitfy-content-center mt-4">
-            <span class="mx-auto title-group-class" style="text-align: center;">Aulas Coletivas</span>
+        <!-- Colunas com imagens -->
+        <div class="my-lg-3 text-center text-black title-conveniado" style="font-family: 'Bebas Neue', sans-serif; font-size: 54px;">
+          SOMOS CONVENIADOS
         </div>
-        <div class="container">
-            <div class="row mt-2 px-2">
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                      <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                      <div class="card-img-overlay"></div>
-                      <div class="card-footer bg-dark text-white">Pilates</div>
-                    </div>
-                </div>
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                        <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                        <div class="card-img-overlay"></div>
-                        <div class="card-footer bg-dark text-white">Jiu-Jitsu</div>
-                      </div>
-                </div>
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                        <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                        <div class="card-img-overlay"></div>
-                        <div class="card-footer bg-dark text-white">Crossfit</div>
-                      </div>
-                </div>
-            </div>
-            <div class="row mb-4 px-2">
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                      <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                      <div class="card-img-overlay"></div>
-                      <div class="card-footer bg-dark text-white">Fit Dance</div>
-                    </div>
-                </div>
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                        <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                        <div class="card-img-overlay"></div>
-                        <div class="card-footer bg-dark text-white">Jump</div>
-                      </div>
-                </div>
-                <div class="col-sm my-2">
-                    <div class="card bg-dark text-white" style="border: 0px;">
-                        <img class="card-img" src="images/aulacoletiva.jpg" alt="">
-                        <div class="card-img-overlay"></div>
-                        <div class="card-footer bg-dark text-white">Judô</div>
-                      </div>
-                </div>
-            </div>
+        <div class="row">
+          <div class="col-md-6 d-flex justify-content-center align-items-center p-3 flex-column bg-gympass">
+            <img class="mb-0" src="images/banner_gympass.webp" width="80%" height="80%">
+            <img class="mb-4" src="images/gympass-escrita.png" width="60%" height="60%">
+          </div>
+          <div class="col-md-6 d-flex justify-content-center align-items-center p-3 flex-column bg-totalpass">
+            <img src="images/logo_totalpass.png" width="60%" height="60%" style="margin-top: 16%; margin-bottom: 7%;">
+            <img src="images/totalpass.png" width="60%" height="60%">
+          </div>
         </div>
+        <!-- Divisor horizontal arredondado -->
+        <hr class="rounded">
+        <br /><br /><br /><br />
     </div>
 
 
