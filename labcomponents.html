@@ -153,11 +153,22 @@
           object-fit: cover;
         }
 
-        .carousel-caption span{
+        .title-carousel{
           font-family: 'Anton', sans-serif; 
-          font-size: 36px;
-          color: black;
+          font-size: 48px;
+          color: white;
+          font-style: oblique;
+          width: fit-content;
+          background-color: black;
+          transform: rotate(-30deg);
+          position: relative;
+          z-index: 1;
+          top: 100px;
+          left: -3%;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
+
+        
 
    </style>
 
@@ -243,6 +254,7 @@
           </div>
         </div>
         <hr class="divider mb-5">
+        <div class="text-center px-4 title-carousel">VENHA CONHECER!</div>
         <!-- Carrossel de imagens - Biblioteca -->
         <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" style="position: relative; z-index: 0;">
           <div class="carousel-indicators">
