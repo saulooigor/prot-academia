@@ -67,7 +67,7 @@
         .container{
             text-align: center;
             margin-top: 2%;
-            
+            padding: 0 !important;
         }
 
         .card-image-group div{
@@ -195,10 +195,9 @@
           background-image: linear-gradient(black, black), conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
           background-origin: border-box;
           background-clip: content-box, border-box;
-          display: inline-block;
-          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          display: inline-flex;
           position: relative;
-          animation: spin 10s linear 0s infinite;
+          animation: spin 2s linear 0s infinite;
           z-index: 0;
         }
 
@@ -214,6 +213,11 @@
           color: white;
           text-shadow: 1px 1px grey;
         }
+
+        .list-group-horizontal::-webkit-scrollbar {
+          display: none;
+        }
+        
 
    </style>
 
@@ -332,14 +336,14 @@
           </button>
         </div>
         <div class="bg-black text-center title-planos pt-4">Planos que cabem no seu bolso!</div>
-        <div class="d-flex justify-content-between bg-black py-4 px-3">
-          <div class="component-itemlist">
+        <div class="list-group list-group-horizontal position-relative overflow-auto bg-black py-4 justify-content-center" style="border-radius: 0 !important; height: 400px;">
+          <div class="component-itemlist mx-3">
             <div class="rounded-gradient-borders"></div>
             <div class="content-rounded" style="padding-top: 70px;">
-              <div class="text-white py-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+              <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
                 Semestral
               </div>
-              <div class="d-inline-flex py-2">
+              <div class="d-inline-flex pt-2">
                 <span class="text-white" style="font-family: 'Anton', 'sans-serif'; font-size: 36px; text-shadow: 1px 1px gray; line-height: 0; font-style: italic;">
                   6x
                 </span>
@@ -352,10 +356,10 @@
           <div class="component-itemlist">
             <div class="rounded-gradient-borders"></div>
             <div class="content-rounded" style="padding-top: 70px;"> 
-              <div class="text-white py-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+              <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
               Anual
             </div>
-            <div class="d-inline-flex py-2">
+            <div class="d-inline-flex pt-2">
               <span class="text-white" style="font-family: 'Anton', 'sans-serif'; font-size: 36px; text-shadow: 1px 1px gray; line-height: 0; font-style: italic;">
                 12x
               </span>
@@ -365,13 +369,13 @@
             </div>
           </div>
           </div>
-          <div class="component-itemlist">
+          <div class="component-itemlist mx-3">
             <div class="rounded-gradient-borders"></div>
             <div class="content-rounded" style="padding-top: 70px;"> 
-            <div class="text-white py-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+            <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 54px; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
               Mensal
             </div>
-            <div class="d-inline-flex py-2">
+            <div class="d-inline-flex pt-2">
               <span class="text-white" style=" font-family:'Roboto Condensed', sans-serif; font-size: 54px; font-style: italic; line-height: 15px; font-weight: normal; text-shadow: 1px 1px gray;">
                 R$ 89,90
               </span>
