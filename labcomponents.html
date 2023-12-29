@@ -22,7 +22,7 @@
 
         .container{
             text-align: center;
-            margin-top: 2%;
+            
             padding: 0 !important;
         }
 
@@ -140,6 +140,14 @@
           .p-conveniado{
             margin-left: 5%;
           }
+
+          .header{
+            background-image: url(images/banner_academia_vertical.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            height: 100vh;
+          }
         }
 
         @keyframes spin {
@@ -193,6 +201,33 @@
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
+        @media (min-width: 481px) {
+          .header{
+            background-image: url(images/banner_academia.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            height: 100vh;
+          }
+        }
+
+        .blink-class{
+          animation: blink 2s linear infinite;
+          color: white;
+        }
+
+        @keyframes blink{
+          25%{
+              opacity: 0.5;
+          }
+          50%{
+              opacity: 0;
+          }
+          75%{
+              opacity: 0.5;
+          }
+        }
+
    </style>
 
     <meta charset="utf-8">
@@ -216,28 +251,25 @@
   </head>
   <body>
     <div class="container">
-
-        <!-- Testes iniciais e inicialização do documento -->
-
-        Hello World!
-        <br /><br />
-        <div style="border-style: solid; border-color: aquamarine; width: 30px; height: 40px;  margin: auto;">
-
+      <div class="header w-100 d-flex flex-column pb-3 pt-2 px-4">
+        <div class="d-flex flex-row-reverse w-100">
+          <a href="index.html">
+            <i class="fa-brands fa-instagram align-middle" style="font-size: 5vh; color: white;"></i>
+          </a>
+          <a href="index.html">
+            <i class="fa-brands fa-whatsapp align-middle" style="font-size: 5vh; color: white; margin-right: 1rem;"></i>
+          </a>
+          <a href="index.html">
+            <i class="fa-brands fa-facebook align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
+          </a>
+          <a href="index.html">
+            <i class="fa-brands fa-tiktok align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
+          </a>
         </div>
-
-        <div class="my-lg-4"><i>Teste saulo Margin bottom!</i></div>
-        <div class="card-image-group d-flex flex-row">
-          <div class="col-md-3" style="border-style: solid; border-color: red;"></div>
-          <div class="col-md-3" style="border-style: solid; border-color: blue;"></div>
-          <div class="col-md-3" style="border-style: solid; border-color: green;"></div>
-          <div class="col-md-3" style="border-style: solid; border-color: yellow;"></div>
-        </div>
-        <br/><br/>
-        <div ><i>Teste BootStrap!</i></div>
-        <!-- Desenvolvimento de componentes para criação de sites -->
-
+        <span class="material-symbols-outlined blink-class align-self-center mt-auto" style="font-size: 15vh;">expand_more</span>
+      </div>
         <!-- Lista de cards com imagens -->
-        <div class="row mt-lg-5">
+        <div class="row">
             <div class="col-md-3 card-coletiva d-flex flex-column-reverse" >
               <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
                 FUNCIONAL
