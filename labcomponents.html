@@ -228,6 +228,44 @@
           }
         }
 
+        .btn-whats{
+          height: 10.3dvh;
+          width: 10.3dvh;
+          border-radius: 50%;
+          background-color: #1DAA61;
+          position: absolute;
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+          right: 8%;
+          bottom: 10dvh;
+          transition: width 1.5s ease-in-out;
+        }
+
+        .btn-whats:hover{
+          width: 30.9dvh;
+          border-radius: 10.3dvh;
+          justify-content: start;
+          transition: width 1.5s ease-in-out;
+        }
+
+        .text-btn-whats{
+          display: none;
+          font-size: 4dvh;
+          margin-left: 1dvh;
+          color: white;
+          font-family: 'Anton', sans-serif;
+        }
+
+        .btn-whats:hover .text-btn-whats{
+          display: block;
+          animation: fadeIn 5s;
+          
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
+
    </style>
 
     <meta charset="utf-8">
@@ -251,18 +289,18 @@
   </head>
   <body>
     <div class="container">
-      <div class="header w-100 d-flex flex-column pb-3 pt-2 px-4">
+      <div class="header w-100 d-flex flex-column pb-3 pt-3 px-4">
         <div class="d-flex flex-row-reverse w-100">
-          <a href="index.html">
+          <a href="https://www.instagram.com/">
             <i class="fa-brands fa-instagram align-middle" style="font-size: 5vh; color: white;"></i>
           </a>
-          <a href="index.html">
+          <a href="https://wa.me/5531975157421">
             <i class="fa-brands fa-whatsapp align-middle" style="font-size: 5vh; color: white; margin-right: 1rem;"></i>
           </a>
-          <a href="index.html">
+          <a href="https://facebook.com/">
             <i class="fa-brands fa-facebook align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
           </a>
-          <a href="index.html">
+          <a href="https://www.tiktok.com/explore">
             <i class="fa-brands fa-tiktok align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
           </a>
         </div>
@@ -477,6 +515,10 @@
           </div>
         </div>
         <div class="text-center text-black bg-white" style="font-size: 1.4ex; font-family: Arial, Helvetica, sans-serif;">Developed by @saulooigor</div>
+        <div class="btn-whats d-none d-md-flex justify-content-center align-items-center">
+          <i class="fa-brands fa-whatsapp" style="font-size: 8dvh; color: white;"></i>
+          <div class="text-btn-whats">Mensagem</div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/709e9629b5.js" crossorigin="anonymous"></script>
