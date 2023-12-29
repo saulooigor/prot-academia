@@ -1,365 +1,276 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <style>
-
-        .blink-class{
-            animation: blink 2s linear infinite;
-        }
-
-        body,html{
-            height: 100%;
-            
-        }
-
-        html{
-            overflow-y: scroll;
-        }
-
-        .btn-headersocial {
-            width: 50px;
-            height: 50px;
-            border-radius: 30px;
-            text-align: center;
-            font-size: 12px;
-            border: none !important;
-        }
+   <style>
         
-        .carousel-control-next,
-        .carousel-control-prev /*, .carousel-indicators */ {
-           filter: invert(100%);
-           opacity: 1;
+        .divider{
+          border-top: 2px solid black;
+          border-radius: 2px;
+          opacity: .1 !important;
+          width: 90%;
+          position: relative;
+          left: 5%;
         }
 
-        .carousel.carousel-fade .carousel-item {
-            display: block;
-            opacity: 0;
-            transition: opacity linear 1s;
-        }
-        
-        .carousel.carousel-fade .carousel-item.active {
-            opacity: 1 !important;
-        }
-
-        .content-cr-item{
-            border-bottom: 5px solid black;
-            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-            width: 52%;
-            height: 50%;
-            padding: 2%;
-            margin: auto;
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%; /* needed for container min-height */
+          overflow-x: hidden;
         }
 
         .container{
-            max-width: max-content !important;
+            text-align: center;
+            
+            padding: 0 !important;
         }
 
-        .fade-in-block { animation: fadeIn 5s; }
+        .card-image-group div{
+            width: 200px;
+            max-width: 100%;
+        }
 
-        .fill-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .row .col-md-3{
+            height: 400px;
+            min-height: 20%;
+            max-height: 80%;
+            position: relative;
+            transition: height 1s;
             
         }
-        
-        .fill-image img {
-            width: 26px;
-            height: 26px;
-            
+
+        .row .col-md-3:hover{
+          left: -2%;
+          bottom: -20%;
+          box-shadow: rgb(38, 57, 77) 0px 30px 30px 0px;
+          height: 410px;
         }
 
-        .gympass-content{
-            background-color: black;
-        }
-
-        .header{
-            background-image: url(../prot-academia/images/salao2-opac-2.jpg);
-            background-position: center;
+        .card-coletiva {
+            background-image: url(images/aulacoletiva.jpg);
+            background-position-x: 75%;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 57%;
             color: white;
-            padding-top: 10px;
-            padding: 1%;
+            padding: 0 !important;
         }
 
-        .img-gympass{
-            width: 75%;
-            height: auto;
-            border-radius: 75%;
-            box-shadow: 15px 15px white;
+        .card-judo{
+          background-image: url(images/judo.jpg);
+          background-position-x: 50%;
+          background-position-y: 30%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 10%;
+          color: white;
+          padding: 0 !important;
         }
 
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 700,
-          'GRAD' 0,
-          'opsz' 70;
-          color: black;
-          font-size: 48px !important;
+        .card-fitdance{
+          background-image: url(images/dancefit.jpg);
+          background-position-x: 75%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 57%;
+          color: white;
+          padding: 0 !important;
+        }
+
+        .card-crossfit{
+          background-image: url(images/crossfit.jpg);
+          background-position-x: 75%;
+          background-position-y: 30%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 57%;
+          color: white;
+          padding: 0 !important;
+        }
+
+        .card-footer{
           
+          height: 50px; 
+          border-left: 100px solid transparent;
+          font-family: 'Anton', sans-serif;
+          font-size: 3ex;
+          font-style: oblique;
           
         }
 
-        .p-gympass{
-            color: white;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: 'Alfa Slab One', sans-serif;
-            font-size: large;
+        .title-conveniado{
+          text-shadow: 1px 1px lightgray;
+          font-family: 'Anton', sans-serif; 
+          font-size: 4.3ex;
+        }
+        
+        .carousel-item img{
+          height: 500px;
+          object-fit: cover;
         }
 
-        .p-valores-content{
-            font-family: 'Alfa Slab One', sans-serif;
-            color: black;
-            font-size: x-large;
+        .carousel.carousel-fade .carousel-item {
+          display: block;
+          opacity: 0;
+          transition: opacity linear 1s;
+        }
+      
+        .carousel.carousel-fade .carousel-item.active {
+          opacity: 1 !important;
         }
 
-        .p-header{
-            font-family: 'Black Ops One', sans-serif;
-            font-size: xx-large;
-            color: black;
+        .title-carousel{
+          font-family: 'Anton', sans-serif; 
+          font-size: 4.3ex;
+          color: white;
+          font-style: oblique;
+          width: fit-content;
+          background-color: black;
+          transform: rotate(-30deg);
+          position: relative;
+          z-index: 1;
+          top: 80px;
+          left: -3%;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
 
-        .title-cr-item{
-            font-family: 'Black Ops One', sans-serif;
-            font-size: xx-large;
-            color: black;
+        @media (max-width: 480px) {
+          
+          .title-conveniado, 
+          .p-conveniado{
+            margin-left: 5%;
+          }
+
+          .header{
+            background-image: url(images/banner_academia_vertical.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            height: 100vh;
+          }
         }
 
-        .parcels{
-            font-size: medium;
-            font-family: 'Alfa Slab One', sans-serif;
-            color: black;
+        @keyframes spin {
+          from {transform:  rotate(0);}
+          to   {transform:  rotate(360deg);}
         }
 
-        .pricing{
-            font-size: xx-large;
-            font-family: 'Black Ops One', sans-serif;
-            color: grey;
+        .rounded-gradient-borders {
+          width: 250px;
+          height: 250px;
+          border: solid 5px transparent;
+          border-radius: 50%;
+          background-image: linear-gradient(black, black), conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          display: inline-flex;
+          position: relative;
+          animation: spin 2s linear 0s infinite;
+          z-index: 0;
         }
 
-        svg{
-            fill: black;
+        .content-rounded{
+          position: relative;
+          bottom: 250px;
+          z-index: 1;
         }
 
-        svg:hover{
-            fill: gray;
+        .title-planos{
+          font-family: 'Anton', sans-serif; 
+          font-size: 4.3ex;
+          color: white;
+          text-shadow: 1px 1px grey;
         }
 
-        .title-gympass{
-            font-family: 'Alfa Slab One', sans-serif;
-            font-size: xx-large;
-            color: white;
+        .list-group-horizontal::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .location-section{
+          background-image: url(images/bg_maps.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: fit-content;
+          padding-top: 4vh;
+          padding-bottom: 4vh;
         }
 
-        .title-group-class{
-            font-family: 'Black Ops One', sans-serif;
-            font-size: xx-large;
-            color: black;
+        .component-map{
+          border: 5px solid white;
+          border-radius: 5px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
-        .card{
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-            height: auto;
-            font-family: 'Alfa Slab One', sans-serif;
+        @media (min-width: 481px) {
+          .header{
+            background-image: url(images/banner_academia.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            height: 100vh;
+          }
+        }
+
+        .blink-class{
+          animation: blink 2s linear infinite;
+          color: white;
         }
 
         @keyframes blink{
-            25%{
-                opacity: 0.5;
-            }
-            50%{
-                opacity: 0;
-            }
-            75%{
-                opacity: 0.5;
-            }
+          25%{
+              opacity: 0.5;
+          }
+          50%{
+              opacity: 0;
+          }
+          75%{
+              opacity: 0.5;
+          }
+        }
+
+        .btn-whats{
+          height: 10.3dvh;
+          width: 10.3dvh;
+          border-radius: 50%;
+          background-color: #1DAA61;
+          position: absolute;
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+          right: 8%;
+          bottom: 10dvh;
+          transition: width 1.5s ease-in-out;
+        }
+
+        .btn-whats:hover{
+          width: 30.9dvh;
+          border-radius: 10.3dvh;
+          justify-content: start;
+          transition: width 1.5s ease-in-out;
+        }
+
+        .text-btn-whats{
+          display: none;
+          font-size: 4dvh;
+          margin-left: 1dvh;
+          color: white;
+          font-family: 'Anton', sans-serif;
+        }
+
+        .btn-whats:hover .text-btn-whats{
+          display: block;
+          animation: fadeIn 5s;
+          
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
 
-        @keyframes progress-bar {
-            0% {border-color: #FC695A; left: 0%;}
-            25% {border-color: #FC695A; left: 40%;}
-            50% {border-color: #26D07C; left: 80%;}
-            75% {border-color: #26D07C; left: 40%;}
-            100% {border-color: #FC695A; left: 0%;}
-          }
-  
-          @keyframes progress-bar-inverse {
-            0% {border-color: #26D07C; left: 80%;}
-            25% {border-color: #26D07C; left: 40%;}
-            50% {border-color: #FC695A; left: 0%;}
-            75% {border-color: #FC695A; left: 40%;}
-            100% {border-color: #26D07C; left: 80%;}
-          }
-  
-          .rounded {
-            border-top: 10px;
-            border-color: #FC695A;
-            border-style: solid;
-            position: relative;
-            opacity: 1 !important;
-            border-radius: 10px;
-            width: 20%;
-            animation-name: progress-bar;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-          }
-  
-          .rounded-inverse {
-            border-top: 10px;
-            border-color: #26D07C;
-            border-style: solid;
-            position: relative;
-            left: 80%;
-            opacity: 1 !important;
-            border-radius: 10px;
-            width: 20%;
-            animation-name: progress-bar-inverse;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-          }
-  
-          .divider{
-            border-top: 2px solid black;
-            border-radius: 2px;
-            opacity: .1 !important;
-            width: 100%;
-            position: relative;
-            
-          }
-  
-          html,
-          body {
-            margin: 0;
-            padding: 0;
-            height: 100%; /* needed for container min-height */
-          }
-  
-          .container{
-              text-align: center;
-              margin-top: 2%;
-              
-          }
-  
-          .card-image-group div{
-              width: 200px;
-              max-width: 100%;
-          }
-  
-          .row .col-md-3{
-              height: 600px;
-              min-height: 20%;
-              max-height: 80%;
-              position: relative;
-              transition: height 1s;
-              
-          }
-  
-          .row .col-md-3:hover{
-            left: -2%;
-            bottom: -20%;
-            box-shadow: rgb(38, 57, 77) 0px 30px 30px 0px;
-            height: 610px;
-          }
-  
-          .card-coletiva {
-              background-image: url(images/aulacoletiva.jpg);
-              background-position-x: 75%;
-              background-repeat: no-repeat;
-              background-size: cover;
-              color: white;
-              padding: 0 !important;
-          }
-  
-          .card-judo{
-            background-image: url(images/judo.jpg);
-            background-position-x: 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 57%;
-            color: white;
-            padding: 0 !important;
-          }
-  
-          .card-fitdance{
-            background-image: url(images/dancefit.jpg);
-            background-position-x: 75%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 57%;
-            color: white;
-            padding: 0 !important;
-          }
-  
-          .card-crossfit{
-            background-image: url(images/crossfit.jpg);
-            background-position-x: 75%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 57%;
-            color: white;
-            padding: 0 !important;
-          }
-  
-          .card-footer{
-            
-            height: 50px; 
-            border-left: 100px solid transparent;
-            font-family: 'Anton', sans-serif;
-            font-size: x-large;
-            font-style: oblique;
-            
-          }
-  
-          .title-conveniado{
-            text-shadow: 1px 1px lightgray;
-            font-family: 'Anton', sans-serif; 
-            font-size: 54px;
-          }
-          
-          .carousel-item img{
-            height: 800px;
-            object-fit: cover;
-          }
-  
-          .title-carousel{
-            font-family: 'Anton', sans-serif; 
-            font-size: 48px;
-            color: white;
-            font-style: oblique;
-            width: fit-content;
-            background-color: black;
-            transform: rotate(-30deg);
-            position: relative;
-            z-index: 1;
-            top: 100px;
-            left: -3%;
-            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          }
-  
-          @media (max-width: 480px) {
-            .title-carousel {
-              font-size: 36px;
-            }
-          }
-  
-          
-    </style>
-
+   </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gym Prototype</title>
+    <title>Components</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -371,81 +282,32 @@
     
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- FontAwesome - Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/709e9629b5.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="d-flex flex-row-reverse px-3">
-            <div class="btn-headersocial">
-                <a href="https://gympass.com" class="btn btn-default btn-circle fill-image">
-                    <img src="images/logo-nova.svg" class="image-gympass" viewBox="0 0 512 512">
-                </a>
-            </div>
-            <div class="btn-headersocial">
-                <a href="https://facebook.com" class="btn align-middle btn-headersocial">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
-                </a>
-            </div>
-            <div class="btn-headersocial">
-                <a href="https://instagram.com" class="btn align-middle btn-headersocial">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                </a>
-            </div>
+    <div class="container">
+      <div class="header w-100 d-flex flex-column pb-3 pt-3 px-4">
+        <div class="d-flex flex-row-reverse w-100">
+          <a href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram align-middle" style="font-size: 5vh; color: white;"></i>
+          </a>
+          <a href="https://wa.me/5531975157421">
+            <i class="fa-brands fa-whatsapp align-middle" style="font-size: 5vh; color: white; margin-right: 1rem;"></i>
+          </a>
+          <a href="https://facebook.com/">
+            <i class="fa-brands fa-facebook align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
+          </a>
+          <a href="https://www.tiktok.com/explore">
+            <i class="fa-brands fa-tiktok align-middle" style="font-size: 4.2vh; color: white; margin-right: 1rem;"></i>
+          </a>
         </div>
-        <div class="p-0 d-flex justify-content-center fade-in-block">
-            <div class="col center-block" style="text-align: center;">
-                <img src="images/corrigida.png">
-                <p class="my-1 p-header">Venha conhecer nossa academia!</p>
-                <span class="material-symbols-outlined  blink-class ">expand_more</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Content -->
-    <div class="d-flex jusitfy-content-center px-2">
-        <!-- Planos e valores -->
-        <div class="col center-block mt-4" style="text-align: center;">
-            <p class="p-valores-content mb-4">Conheça nossos planos que cabem no seu <span style="color: grey;">bolso!</span></p>
-            <div id="carouselPlans" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="content-cr-item">
-                        <span class="title-cr-item">Plano Anual</span>
-                         <div class="col p-3">
-                             <div class="pricing">R$ 129,90</div>
-                             <span class="parcels">10x 12,99</span>
-                         </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="content-cr-item">
-                        <span class="title-cr-item">Plano Mensal</span>
-                         <div class="col p-3">
-                             <div class="pricing">R$ 69,90</div>
-                             <span class="parcels">Sem parcelamento</span>
-                         </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="content-cr-item">
-                        <span class="title-cr-item p-1">Plano Semestral</span>
-                         <div class="col p-3">
-                             <div class="pricing">R$ 89,90</div>
-                             <span class="parcels">6x 14,99</span>
-                         </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlans" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselPlans" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-        </div>
-        <div class="row mt-lg-5">
+        <span class="material-symbols-outlined blink-class align-self-center mt-auto" style="font-size: 15vh;">expand_more</span>
+      </div>
+        <!-- Lista de cards com imagens -->
+        <div class="row">
             <div class="col-md-3 card-coletiva d-flex flex-column-reverse" >
               <div class="card-footer" style="color:white; text-align: center; line-height: 50px; border-bottom: 50px solid black;">
                 FUNCIONAL
@@ -467,15 +329,14 @@
               </div>
             </div>
         </div>
-        <div class="teste pt-5">
-          <!-- Colunas com imagens -->
+        <div class="pt-5">
           <div class="text-start text-black title-conveniado">
             ACEITAMOS O SEU CONVÊNIO
           </div>
-          <div class="text-start" style="font-family: 'Roboto Condensed', sans-serif; font-size: 36px;">
-            Venha exercitar conosco utilizando o <b style="color: #FC695A;">Gympass</b> ou o <b style="color: #26D07C;">TotalPass</b>
+          <div class="text-start p-conveniado" style="font-family: 'Roboto Condensed', sans-serif; font-size: 3.2ex;">
+            Venha exercitar conosco utilizando o <b style="color: #FC695A; font-weight: 900;">Gympass</b> ou o <b style="color: #26D07C; font-weight: 900;">TotalPass</b>
           </div>
-          <!-- <hr class="rounded-inverse"> -->
+          <!-- Colunas com imagens -->
           <div class="row">
             <div class="col-md-6 d-flex justify-content-center align-items-center p-3 flex-column bg-gympass">
               <img class="mb-0" src="images/banner_gympass.webp" width="80%" height="80%">
@@ -487,7 +348,7 @@
             </div>
           </div>
         </div>
-        <hr class="divider mb-5">
+        <hr class="divider mb-3">
         <div class="text-center px-4 title-carousel">VENHA CONHECER!</div>
         <!-- Carrossel de imagens - Biblioteca -->
         <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" style="position: relative; z-index: 0;">
@@ -520,13 +381,148 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <!-- Divisor horizontal arredondado -->
-        <!-- <hr class="rounded"> -->
-        <br /><br /><br /><br />
+        <div class="bg-black text-center title-planos pt-4">Planos que cabem no seu bolso!</div>
+        <!-- Lista Horizontal com scroll -->
+        <div class="list-group list-group-horizontal position-relative overflow-auto bg-black py-4 justify-content-lg-center" style="border-radius: 0 !important; height: 330px;">
+          <div class="component-itemlist mx-3">
+            <div class="rounded-gradient-borders"></div>
+            <div class="content-rounded" style="padding-top: 50px;">
+              <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 4.3ex; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+                Semestral
+              </div>
+              <div class="d-inline-flex pt-2">
+                <span class="text-white" style="font-family: 'Anton', 'sans-serif'; font-size: 3ex; text-shadow: 1px 1px gray; line-height: 0; font-style: italic;">
+                  6x
+                </span>
+                <span class="text-white" style=" font-family:'Roboto Condensed', sans-serif; font-size: 4.3ex; font-style: italic; line-height: 15px; font-weight: normal; text-shadow: 1px 1px gray;">
+                  R$ 69,90
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="component-itemlist">
+            <div class="rounded-gradient-borders"></div>
+            <div class="content-rounded" style="padding-top: 50px;"> 
+              <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 4.3ex; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+              Anual
+            </div>
+            <div class="d-inline-flex pt-2">
+              <span class="text-white" style="font-family: 'Anton', 'sans-serif'; font-size: 3ex; text-shadow: 1px 1px gray; line-height: 0; font-style: italic;">
+                12x
+              </span>
+              <span class="text-white" style=" font-family:'Roboto Condensed', sans-serif; font-size: 4.3ex; font-style: italic; line-height: 15px; font-weight: normal; text-shadow: 1px 1px gray;">
+                R$ 49,90
+              </span>
+            </div>
+          </div>
+          </div>
+          <div class="component-itemlist mx-3">
+            <div class="rounded-gradient-borders"></div>
+            <div class="content-rounded" style="padding-top: 50px;"> 
+            <div class="text-white pt-3" style=" font-family:'Anton', sans-serif; font-size: 4.3ex; font-style: italic; font-weight: normal; text-shadow: 1px 1px gray;">
+              Mensal
+            </div>
+            <div class="d-inline-flex pt-2">
+              <span class="text-white" style=" font-family:'Roboto Condensed', sans-serif; font-size: 4.3ex; font-style: italic; line-height: 15px; font-weight: normal; text-shadow: 1px 1px gray;">
+                R$ 89,90
+              </span>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row location-section">
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3751.1187526640133!2d-44.13365792505075!3d-19.919399981466643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDU1JzA5LjgiUyA0NMKwMDcnNTEuOSJX!5e0!3m2!1spt-BR!2sbr!4v1687529525501!5m2!1spt-BR!2sbr" class="component-map" width="98%" height="400ex" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-md-6 d-flex align-items-center flex-column justify-content-center" style="font-family: 'Roboto Condensed', sans-serif; font-size: 3.2ex; font-weight: 900;">
+            <div class="d-flex flex-row w-100 pt-3">
+              <span class="material-symbols-outlined mx-2" style="font-size: 3.2ex;">
+                location_on
+              </span>
+              RUA ALEXANDRITA Nº 697 SAPUCAIAS II
+            </div>
+            <div class="d-md-flex flex-row w-100">
+              <span class="material-symbols-outlined mx-2" style="font-size: 3.2ex; color: transparent;">
+                location_on
+              </span>
+              CONTAGEM - MG
+            </div>
+            <div class="d-inline-flex w-100 my-3">
+              <span class="material-symbols-outlined mx-2" style="font-size: 3.2ex;">
+                call
+              </span>
+              (31) 93333-3344
+            </div>
+            <div class="d-inline-flex w-100">
+              <span class="material-symbols-outlined mx-2" style="font-size: 3.2ex;">
+                mail
+              </span>
+              mail@mail.com.br
+            </div>
+            <div class="row mt-5 w-100">
+              <div class="col-md-6 d-flex flex-column" style="padding-left: 0 !important;">
+                <div class="d-md-flex flex-row w-100">
+                  <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 3.2ex;">
+                    schedule
+                  </span>
+                  Seg á Sex.
+                </div>
+                <div class="d-md-flex flex-row w-100">
+                  <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 3.2ex; color: transparent;">
+                    location_on
+                  </span>
+                  06hrs ás 22hrs
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-md-flex flex-row w-100">
+                  <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 3.2ex; color: transparent;">
+                    location_on
+                  </span>
+                  Sábado
+                </div>
+                <div class="d-md-flex flex-row w-100">
+                  <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 3.2ex; color: transparent;">
+                    location_on
+                  </span>
+                  07hrs ás 12hrs
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row bg-black text-white py-3 px-3" style="font-family: 'Roboto Condensed', sans-serif; font-size: 2.2ex; font-weight: 900;">
+          <div class="col-md-6 d-flex flex-column-reverse">
+            <span class="align-self-start">CNPJ: 01.234.567-0001/89</span>
+            <span class="align-self-start">Contagem - MG</span>
+            <span class="align-self-start">Rua Honorio Gurgel Nº 12 - CEP: 32072290</span>
+            <span class="align-self-start">Prótotipo Academia Empresa LTDA</span>
+          </div>
+          <div class="col-md-6 d-flex flex-column">
+            <span class="align-self-end mb-3" style="font-family: 'Anton', 'sans-serif'; font-style: italic; font-size: 2.7ex; font-weight: normal;">NOS SIGA NAS REDES SOCIAIS</span> 
+            <div class="d-inline-flex w-100 justify-content-end align-items-center">
+              <i class="fa-brands fa-instagram mx-2" style="font-size: 2.2ex;"></i>
+              <span>@protacademia09</span>
+            </div>
+            <div class="d-inline-flex w-100 justify-content-end align-items-center">
+              <i class="fa-brands fa-facebook mx-2" style="font-size: 2.2ex;"></i>
+              <span>protacademia100</span>
+            </div>
+            <div class="d-inline-flex w-100 justify-content-end align-items-center">
+              <i class="fa-brands fa-tiktok mx-2" style="font-size: 2.2ex;"></i>
+              <span>@protacademiatiktok</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-black bg-white" style="font-size: 1.4ex; font-family: Arial, Helvetica, sans-serif;">Developed by @saulooigor</div>
+        <div class="btn-whats d-none d-md-flex justify-content-center align-items-center">
+          <i class="fa-brands fa-whatsapp" style="font-size: 8dvh; color: white;"></i>
+          <div class="text-btn-whats">Mensagem</div>
+        </div>
     </div>
-
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/709e9629b5.js" crossorigin="anonymous"></script>
   </body>
+
+  
 </html>
